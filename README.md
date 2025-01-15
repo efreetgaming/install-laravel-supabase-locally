@@ -36,7 +36,7 @@ Open-up your Windows Powerhell and run as administrator and paste the command.
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-<img src="https://raw.githubusercontent.com/efreetgaming/supa-laravel/refs/heads/main/assets/step%201.png?token=GHSAT0AAAAAAC47WOCQIKFHNMHRJOSZC35UZ4HZQBAv">
+<img src="./assets/step 1.png">
 
 after the command execution you may restart your machine and open-up the Windows Powershell wile running as administrator
 
@@ -47,7 +47,7 @@ You may paste this command below, this command will enable the Virtualization to
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-<img src="./assets/step 1.png">
+<img src="./assets/step 2.png">
 
 and again restart your machine
 
