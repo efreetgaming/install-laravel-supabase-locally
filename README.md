@@ -74,3 +74,78 @@ Open up Ubuntu you've just installed and it will take up sometime to set things 
 <img src="https://learn.microsoft.com/en-us/windows/wsl/media/ubuntuinstall.png">
 
 ## 7. Use brew to install Docker
+Once its done you need to install brew for us to able to download docker and supabase
+
+```md
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+## 8. Install Docker using homebrew
+Paste this command to install docker, we need this first to install before installing supabase
+```md
+brew install docker
+```
+
+## 9. Install Supabase
+Paste this command to install supabase. It final comes to the final installation
+```md
+brew install supabase/tap/supabase
+```
+
+## 10. Setup our very first supabase locally
+Create an directory where you will place the supabase init
+```md
+mkdir my_local_supabase
+```
+
+Go to inside of you directory you've just made
+```md
+cd my_local_supabase
+```
+
+Use Supabase Login to access the and give our machine an token so we can run it.
+```html
+supabase login
+```
+
+This will redirect to the site (or just copy the link) and it will need to enter the code you have from the site to the cli. This generates a token and it will allow you know to create init.
+
+Use this command to initialize our very first project
+
+```html
+supabase init
+```
+
+This may take sometime because it will install all the images it needs from docker to run supabase. After installation of it you can now use to start our supabase locally
+```html
+supabase start
+```
+
+<img src="./assets/final.png">
+
+If you happened you don't know the username and password
+
+username = postgres
+password = password
+database = ```empty```
+
+to check your studio use te studio link given to the picture.
+
+## 11 Use Supabase as database to Laravel
+Install Laravel Breeze
+```md
+composer require laravel/breeze --dev
+```
+
+After Composer has installed the Laravel Breeze package, you should run the breeze:install Artisan command. This command publishes the authentication views, routes, controllers, and other resources to your application.
+
+```md
+php artisan breeze:install
+ 
+php artisan migrate
+php artisan serve
+```
+
+And try to open the application to give it a try to login and register to the website without giving an error.
+
+and there you have it guys, i hope you guys find this a helpful one. If you found any issues, suggestion, or feedback feel free to contact me. (I'm a beginner so please bare with me).
