@@ -26,7 +26,7 @@ For more information about the requirements make sure you also check this [guide
 Before we start the installation, I would like to give a quick glance about my machine i'm using and the conditions you should also consider:
 - I'm using Macbook Pro Late 2013 using Bootcamp to run Windows 10
 - I also tried to my desktop and it works perfectly fine as well. The specs with Ryzen 3 3200G (IDK if this is enough)
-- In this guide we will be doing a Manual Install of WSL since most of the people encountered an people including me running some errors when doing the native way.
+- In this guide we will be doing a Manual Install of WSL since most of the people encountered including me running some errors when doing the native way.
 
 # Installation Step-by-Step
 ## 1. Enable the Windows Subsystem for Linux
