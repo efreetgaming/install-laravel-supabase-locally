@@ -131,7 +131,7 @@ database = ```empty```
 
 to check your studio use te studio link given to the picture.
 
-## 11 Use Supabase as database to Laravel
+## 11. Use Supabase as database to Laravel
 Install Laravel Breeze
 ```md
 composer require laravel/breeze --dev
@@ -145,6 +145,8 @@ php artisan breeze:install
 php artisan migrate
 php artisan serve
 ```
+
+to your .env file make sure you copy the DB Line 24 to 28 and change it.
 
 And try to open the application to give it a try to login and register to the website without giving an error.
 
