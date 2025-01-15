@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="Center">
     <img src="https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.png" width="400">
 </p>
@@ -60,3 +61,6 @@ wsl --set-default-version 2
 After setting up to Powershell moving on to Microsoft Store and choice your Linux Distro (in this guide we will be using Ubuntu LTS) and install it
 
 Wait for the next
+=======
+# Under Construction (Tutorial on How to install Supabase Locally in Windows using WSL)
+>>>>>>> ecc443c75b308d901864f43627ef3283ac731d7b
