@@ -47,7 +47,7 @@ You may paste this command below, this command will enable the Virtualization to
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-<img src="https://raw.githubusercontent.com/efreetgaming/supa-laravel/refs/heads/main/assets/step%202.png?token=GHSAT0AAAAAAC47WOCRT4NSCMOZCH3V6LKCZ4HZQDA">
+<img src="./assets/step 1.png">
 
 and again restart your machine
 
@@ -61,10 +61,16 @@ Paste tihs command to Windows Powershell. when installig a new linux distributio
 wsl --set-default-version 2
 ```
 
-<img src="https://raw.githubusercontent.com/efreetgaming/supa-laravel/refs/heads/main/assets/step%203.png?token=GHSAT0AAAAAAC47WOCQPTHGSS2LBQCCCQKYZ4HZQFQ">
+<img src=".//assets/step 3.png">
 
 ## 5. It's time to install your Linux Distribution of choice
 After setting up to Powershell moving on to Microsoft Store and choice your Linux Distro (in this guide we will be using Ubuntu LTS) and install it
 
-<img src="https://raw.githubusercontent.com/efreetgaming/supa-laravel/refs/heads/main/assets/msstore.png?token=GHSAT0AAAAAAC47WOCQVTSCGMZCARUXQURWZ4HZJQQ">
-Wait for the next
+<img src="./assets/msstore.png">
+
+## 6. Setup up your Ubuntu CLI Environment!
+Open up Ubuntu you've just installed and it will take up sometime to set things up, after it will ask for the username and password which you need to provide.
+
+<img src="https://learn.microsoft.com/en-us/windows/wsl/media/ubuntuinstall.png">
+
+## 7. Use brew to install Docker
