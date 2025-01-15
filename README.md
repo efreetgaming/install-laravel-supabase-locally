@@ -36,6 +36,8 @@ Open-up your Windows Powerhell and run as administrator and paste the command.
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
+<img src="https://raw.githubusercontent.com/efreetgaming/supa-laravel/refs/heads/main/assets/step%201.png?token=GHSAT0AAAAAAC47WOCQIKFHNMHRJOSZC35UZ4HZQBAv">
+
 after the command execution you may restart your machine and open-up the Windows Powershell wile running as administrator
 
 ## 2. Enable the Virtual Machine Feature
@@ -45,6 +47,8 @@ You may paste this command below, this command will enable the Virtualization to
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
+<img src="https://raw.githubusercontent.com/efreetgaming/supa-laravel/refs/heads/main/assets/step%202.png?token=GHSAT0AAAAAAC47WOCRT4NSCMOZCH3V6LKCZ4HZQDA">
+
 and again restart your machine
 
 ## 3. Download the Linux kernel update package
@@ -52,9 +56,12 @@ You may need to install this [package](https://wslstorestorage.blob.core.windows
 
 ## 4. Setting up WSL Version 2 as your default version
 Paste tihs command to Windows Powershell. when installig a new linux distribution.
+
 ```md
 wsl --set-default-version 2
 ```
+
+<img src="https://raw.githubusercontent.com/efreetgaming/supa-laravel/refs/heads/main/assets/step%203.png?token=GHSAT0AAAAAAC47WOCQPTHGSS2LBQCCCQKYZ4HZQFQ">
 
 ## 5. It's time to install your Linux Distribution of choice
 After setting up to Powershell moving on to Microsoft Store and choice your Linux Distro (in this guide we will be using Ubuntu LTS) and install it
