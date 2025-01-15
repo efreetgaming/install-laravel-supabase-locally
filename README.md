@@ -1,66 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<p align="Center">
+    <img src="https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.png" width="400">
 </p>
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# How to host Supabase locally on Windows using WSL and Ubuntu CLI Environment
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This Repository is a guide on how to host Supabase Locally using WSL and Ubuntu CLI Environment. The repo is open for acquiring issues and concerns and glad to help regarding with that and also for everyone.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Why use WSL if we have Docker Desktop to host Supabase Locally?
+Well, also tried supabase using docker desktop on windows but again i run to many errors regarding running the container. Thats why i decided to use WSL and Ubuntu to solve my problem. This also i would to share my experience. (I'm beginner so please bare with me)
 
-## Learning Laravel
+## Requirements before continue to the guide.
+List of Requirement we need in order to pull this off are the following below:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- You need to have Windows 10 and later with a version of 2004 and higher (Build 19041 and higher) or Windows 11 to use the commands below. (To identify the version of your machine use the run command and type `winver`)
+- Make sure you have strong connection to the internet.
+- Enough Space.
+- Enable the Virtualization to your BIOS/UEFI Firmware settings. Make sure to check it and enable it.
+- For x64 systems: Version 1903 or later, with Build 18362.1049 or later.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+For more information about the requirements make sure you also check this [guide](https://learn.microsoft.com/en-us/windows/wsl/install) from Microsoft its also included the installation of WSL.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## A quick heads up before we start
+Before we start the installation, I would like to give a quick glance about my machine i'm using and the conditions you should also consider:
+- I'm using Macbook Pro Late 2013 using Bootcamp to run Windows 10
+- I also tried to my desktop and it works perfectly fine as well. The specs with Ryzen 3 3200G (IDK if this is enough)
+- In this guide we will be doing a Manual Install of WSL since most of the people encountered an people including me running some errors when doing the native way.
 
-## Laravel Sponsors
+# Installation Step-by-Step
+## 1. Enable the Windows Subsystem for Linux
+Open-up your Windows Powerhell and run as administrator and paste the command.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```md
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
 
-### Premium Partners
+after the command execution you may restart your machine and open-up the Windows Powershell wile running as administrator
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## 2. Enable the Virtual Machine Feature
+You may paste this command below, this command will enable the Virtualization to your machine
 
-## Contributing
+```md
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+and again restart your machine
 
-## Code of Conduct
+## 3. Download the Linux kernel update package
+You may need to install this [package](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) from microsoft.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 4. Setting up WSL Version 2 as your default version
+Paste tihs command to Windows Powershell. when installig a new linux distribution.
+```md
+wsl --set-default-version 2
+```
 
-## Security Vulnerabilities
+## 5. It's time to install your Linux Distribution of choice
+After setting up to Powershell moving on to Microsoft Store and choice your Linux Distro (in this guide we will be using Ubuntu LTS) and install it
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Wait for the next
