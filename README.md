@@ -59,4 +59,5 @@ wsl --set-default-version 2
 ## 5. It's time to install your Linux Distribution of choice
 After setting up to Powershell moving on to Microsoft Store and choice your Linux Distro (in this guide we will be using Ubuntu LTS) and install it
 
+<img src="https://raw.githubusercontent.com/efreetgaming/supa-laravel/refs/heads/main/assets/msstore.png?token=GHSAT0AAAAAAC47WOCQVTSCGMZCARUXQURWZ4HZJQQ">
 Wait for the next
